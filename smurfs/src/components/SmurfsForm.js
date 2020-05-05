@@ -24,9 +24,10 @@ const SmurfsForm = () => {
     }
 
     // ------------------------- unfinished -----------------------
-    const handleDelete = () => {
-        deleteRequest()
-    }
+    // const handleDelete = (e) => {
+    //     e.preventDefault();
+    //     deleteRequest(smurfs.id)
+    // }
     // ------------------------------------------------------------
 
     return (
@@ -66,7 +67,6 @@ const SmurfsForm = () => {
                 <button type="submit">ADD</button>
             </label>
 
-            {/* // ------------------------- unfinished ------------------- */}
             <label>ID:
             <input
                     type="number"
@@ -76,10 +76,10 @@ const SmurfsForm = () => {
                     placeholder="id"
                 />
             </label>
+
             <label>
-                <button onClick={handleDelete}>DELETE</button>
+                <button onClick={ () => deleteRequest(smurfs.id) }>DELETE</button>
             </label>
-            {/* // ----------------------------------------------------------*/}
 
         </form>
 

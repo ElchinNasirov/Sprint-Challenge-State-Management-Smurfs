@@ -35,10 +35,9 @@ const App = () => {
       })
   }
 
-  // ------------------------- unfinished -----------------------
   const deleteRequest = (id) => {
     axios
-      .delete("http://localhost:3333/smurfs", { params: { id: smurfs.id } })
+      .delete(`http://localhost:3333/smurfs/${id}`)
       .then(res => {
         console.log(res)
       })
@@ -46,7 +45,6 @@ const App = () => {
         console.log(err);
       })
   }
-  // -----------------------------------------------------------
 
   return (
     <SmurfsContext.Provider value={{ smurfs, postRequest, deleteRequest }} >
